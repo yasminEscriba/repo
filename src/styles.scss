@@ -1,1 +1,302 @@
 /* You can add global styles to this file, and also import other style files */
+@import "styles-variables";
+
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+.title-center {
+    flex: 1 1 auto;
+    text-align: center;
+    
+  }
+
+  .title-center1{
+    flex: 1 1 auto;
+    text-align: center;
+    
+  }
+
+  .title-center2{
+    flex: 1 1 auto;
+    text-align: center;
+    
+  }
+
+  .mat-toolbar.mat-primary {
+    background: #28A956;
+    
+    color: #fff;
+
+    align-items: center;
+    
+  }
+
+  .mat-toolbar.mat-primary1 {
+    background: rgb(255, 255, 255);
+   
+    font-weight:bold; 
+    color: rgb(12, 11, 11);
+  }
+  .mat-toolbar.mat-primary2 {
+    background: rgb(255, 255, 255);
+    height: 10px !important;
+    font-weight:bold;
+    
+    font-size:10px;
+  
+    color: rgb(12, 11, 11);
+  }
+
+  .parrafo { 
+    
+    text-align: center;
+    font-weight:bold; 
+    
+    color: rgb(182, 182, 182);
+  }
+  .parrafo1 { 
+    
+    text-align: center;
+    font-weight:bold; 
+    
+    color: rgb(130, 203, 156);
+  }
+
+  .parrafo2 { 
+    
+    text-align: center;
+    font-weight:bold; 
+    font-size:15px;
+    color: rgb(149, 149, 149);
+  }
+
+  .parrafo3 { 
+    
+    text-align: center;
+    font-weight:bold; 
+    font-size:12px;
+    color: rgb(149, 149, 149);
+  }
+  .parrafo4 { 
+    
+    text-align: center;
+    font-weight:bold; 
+    font-size:16px;
+    color: rgb(7, 6, 6);
+  }
+
+
+.bloque{
+width: 400px;
+
+}
+  .myDiv
+{
+  width: 100%;
+  height: 300px;
+}
+
+.illustration {
+    width: 100%;
+  }
+
+  .illustration1 {
+    width: 15%;
+  }
+
+.btns-premios{
+    a{
+        margin: 0 2px;
+        
+    }
+}
+
+.center-div
+{
+ 
+  height: 300px;
+  justify-content: center ;
+  
+  
+}
+
+.mat-button, .mat-raised-button{
+  background-color:red;
+}
+
+.scaling-svg-container {
+  position: relative; 
+  height: 0; 
+  width: 100%; 
+  padding: 0;
+  padding-bottom: 100%; 
+  /* override this inline for aspect ratio other than square */
+ }
+ 
+ .scaling-svg {
+  position: absolute; /*definir esto*/
+  height: 100%; 
+  width: 100%; 
+  left: 0; 
+  top: 0;
+ }
+
+ .btn {
+  display: inline-block;
+  padding: 9px 12px;
+  padding-top: 7px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: none;
+  border-radius: 8px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #d1dade;
+  -webkit-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-image: none !important;
+  border: none;
+  text-shadow: none;
+  box-shadow: none;
+  transition: all 0.12s linear 0s !important;
+  font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+
+  .btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-radius: 8px;
+    width: 250px;
+    
+  }
+
+
+.no-hover-effect.mat-button.mat-primary .mat-button-focus-overlay,
+.no-hover-effect.mat-button.mat-accent .mat-button-focus-overlay,
+.no-hover-effect.mat-button.mat-warn .mat-button-focus-overlay
+{
+  background-color: transparent;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: #5cb85c;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+/* borderless table */
+table {
+  border-collapse: collapse;
+  border-radius: 0.5em;
+  overflow: hidden;
+  width:190px;
+  height:50px;
+  align-self: center;
+}
+
+th, td {
+  
+  background: #ddd;
+  
+}
+
+
+.css-mine {
+  
+  clear: both;
+}
+
+body{
+  font-size: 16px;
+}
+/* Mobile */
+@media (min-width: 320px) and (max-width:480px){
+  body{
+      font-size: 12px !important;
+      
+  }
+  
+}
+/* tablet */
+@media (min-width: 481px) and (max-width:768px){
+  body{
+      font-size: 20px !important;
+  }
+}
+
+.title1{
+  font-size: 12px;
+  flex: 1 1 auto;
+    text-align: center;
+}
+/* Mobile */
+@media (min-width: 320px) and (max-width:480px){
+  .title1{
+      font-size: 9px !important;
+      
+  }
+  
+}
+/* tablet */
+@media (min-width: 481px) and (max-width:768px){
+  .title1{
+      font-size: 20px !important;
+  }
+}
+
+.title2{
+  font-size: 20px;
+  flex: 1 1 auto;
+    text-align: center;
+}
+/* Mobile */
+@media (min-width: 320px) and (max-width:480px){
+  .title2{
+      font-size: 24px !important;
+      
+  }
+  
+}
+/* tablet */
+@media (min-width: 481px) and (max-width:768px){
+  .title2{
+      font-size: 28px !important;
+  }
+}
+
+
+
+
+@media (min-width: 320px) and (max-width:480px){
+  .openDialog{
+   top: 0;
+   left: 0;
+   
+  }
+}
+
+@media (min-width: 768px) and (max-width:1024px){
+  .openDialog{
+    top: 0;
+    left: 0;
+    width:100%;
+    max-width: 100%;
+    height:100%;
+  }
+}
+
+
+
+
+  
+

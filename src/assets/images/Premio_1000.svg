@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130.501" height="130.501" viewBox="0 0 130.501 130.501">
+  <g id="Premio_1000" transform="translate(-1431 -974)">
+    <g id="Rectangle_2365" data-name="Rectangle 2365" transform="translate(1431 974)" fill="#54caad" stroke="rgba(0,0,0,0.06)" stroke-width="10">
+      <rect width="130.501" height="130.501" rx="65" stroke="none"/>
+      <rect x="5" y="5" width="120.501" height="120.501" rx="60" fill="none"/>
+    </g>
+    <text id="_1000" data-name="+1000" transform="translate(1496 1038.787)" fill="#fff" font-size="20" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500"><tspan x="-28.24" y="0">+1000</tspan></text>
+    <text id="Opciones" transform="translate(1496 1057.543)" fill="#fff" font-size="14" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500" opacity="0.6"><tspan x="-30.87" y="0">Opciones</tspan></text>
+  </g>
+</svg>

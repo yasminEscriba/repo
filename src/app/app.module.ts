@@ -1,16 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule, MatDialogModule } from '@angular/material';
+import {MatButtonModule} from '@angular/material/button';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, DialogDataExampleDialog } from './app.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogDataExampleDialog
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule, // new modules added here
+    MatToolbarModule,
+    MatCardModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    DialogDataExampleDialog
   ],
   providers: [],
   bootstrap: [AppComponent]

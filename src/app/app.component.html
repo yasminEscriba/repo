@@ -1,21 +1,91 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<header>
+
+    <mat-toolbar color="primary1" style="min-height: 30px !important; height: 30px !important;">
+      
+      
+      <p class="title1" >Ruleta de Interbank</p> 
+      
+      
+   
+    </mat-toolbar>
+    
+  <mat-toolbar color="primary" >
+      <h1 class="title2">Ruleta de Interbank</h1> 
+  </mat-toolbar>
+
+</header>
+<body>
+<div align="center">
+    &nbsp;
+  <span class="parrafo"> 
+    <h2 class="center white md-display-3 " hide show-xs>¡Tienes 1 giro disponible!</h2>
+  </span>
+
+
+  <!-- <div class='section content'>
+      <img class='scaling-svg' src='assets/images/Ruleta_on.svg' viewBox="0 0 1024 1366"/>
+    </div>
+
+    <div class="scaling-svg-container" style="padding-bottom: 80% ">
+  
+      <img  class='scaling-svg' src='assets/images/Ruleta_on.svg' viewBox="0 0 80 80 "/>
+    
+  
+</div>-->
+
+
+
+<!-- 
+            Consider 
+            * Add the width and maximum height that the roulette will have on the canvas.
+            * The width and height should be the same values
+            * las imágenes deben tener fondo transparente, y las imágenes slide deben tener igual tamaño en base al width y height del canvas
+            
+            Change Behavior
+            * locator file roulette.js
+        -->
+        <canvas id="canvas" width="1688" height="1688" data-responsiveMinWidth="16" data-responsiveScaleHeight="true"  >
+            <p  align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
+        </canvas>
+
+<p>&nbsp;</p>
+
+    <p><span class="parrafo"> 
+        <h2 class="center white md-display-4" hide-gt-sm>Detalle de premios en ruleta</h2>   
+      </span></p>
+
+    <div class="btns-premios" >
+      <a href="javascript:;"  mat-button (click)="openDialog(1)" >
+        <img  class="illustration1" src="assets/images/Bot├│n_10.svg" />
+      </a>
+      <a href="javascript:;"  mat-button (click)="openDialog(2)" >
+        <img   class="illustration1" src="assets/images/bot_n_800.svg" />
+      </a>
+      <a href="javascript:;"  mat-button (click)="openDialog(3)">
+        <img   class="illustration1" src="assets/images/Bot├│n_1000.svg" />
+      </a>
+      <a href="javascript:;"  mat-button (click)="openDialog(4)">
+        <img  class="illustration1" src="assets/images/Bot├│n_fastfood.svg" />
+      </a>
+      <a href="javascript:;"  mat-button (click)="openDialog(5)">
+        <img   class="illustration1" src="assets/images/Bot├│n_taxis.svg" />
+      </a>
+      <a href="javascript:;"  mat-button (click)="openDialog(6)" >
+        <img   class="illustration1" src="assets/images/Bot├│n_tiendas.svg" />
+      </a>
+    </div>
+    <p>&nbsp;</p>
+
+    <p>
+        <a href="javascript:;"  mat-button (click)="openDialog(8)">
+         <span class="parrafo1">
+            <h2 class="center white md-display-4" hide-gt-sm>¿Cómo funciona la ruleta?</h2>
+             </span>
+          </a>
+      
+      </p>
+  
+  </div>
+  </body>
