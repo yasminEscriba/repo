@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51.485" height="50.656" viewBox="0 0 51.485 50.656">
+  <g id="Premio_fastfood" transform="translate(-2838 -1335)">
+    <g id="Rectangle_2365" data-name="Rectangle 2365" transform="translate(2838 1335)" fill="#618eeb" stroke="rgba(0,0,0,0.06)" stroke-width="2">
+      <path d="M0,0H45.485a6,6,0,0,1,6,6V44.656a6,6,0,0,1-6,6H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" stroke="none"/>
+      <path d="M2,1H45.485a5,5,0,0,1,5,5V44.656a5,5,0,0,1-5,5H2a1,1,0,0,1-1-1V2A1,1,0,0,1,2,1Z" fill="none"/>
+    </g>
+    <path id="Path_7156" data-name="Path 7156" d="M18.06,22.99h1.66a1.652,1.652,0,0,0,1.63-1.46L23,5.05H18V1H16.03V5.05H11.06l.3,2.34a10.251,10.251,0,0,1,4.27,2.26,6.89,6.89,0,0,1,2.43,5.29v8.05ZM1,21.99V21H16.03v.99a1,1,0,0,1-1.01,1H2.01A1,1,0,0,1,1,21.99Zm15.03-7c0-8-15.03-8-15.03,0ZM1.02,17h15v2h-15Z" transform="translate(2852 1348)" fill="#fff"/>
+  </g>
+</svg>

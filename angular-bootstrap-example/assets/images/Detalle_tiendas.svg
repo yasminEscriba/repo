@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130.501" height="130.501" viewBox="0 0 130.501 130.501">
+  <g id="Detalle_tiendas" transform="translate(-3746 -1150.492)">
+    <g id="Rectangle_2365" data-name="Rectangle 2365" transform="translate(3746 1150.492)" fill="#a39fff" stroke="rgba(0,0,0,0.06)" stroke-width="10">
+      <rect width="130.501" height="130.501" rx="65" stroke="none"/>
+      <rect x="5" y="5" width="120.501" height="120.501" rx="60" fill="none"/>
+    </g>
+    <path id="Path_7142" data-name="Path 7142" d="M0,0H46.013V46.013H0Z" transform="translate(3787.993 1192.993)" fill="none"/>
+    <path id="Path_7143" data-name="Path 7143" d="M28.9,23.089a3.816,3.816,0,0,0,3.355-1.975L39.114,8.672a1.91,1.91,0,0,0-1.668-2.837H9.072L7.269,2H1V5.834H4.834l6.9,14.552L9.148,25.064A3.841,3.841,0,0,0,12.5,30.758H35.51V26.924H12.5l2.109-3.834Zm-18-13.421H34.187L28.9,19.255H15.437ZM12.5,32.676a3.834,3.834,0,1,0,3.834,3.834A3.829,3.829,0,0,0,12.5,32.676Zm19.172,0A3.834,3.834,0,1,0,35.51,36.51,3.829,3.829,0,0,0,31.676,32.676Z" transform="translate(3788.91 1194.828)" fill="#fff"/>
+  </g>
+</svg>

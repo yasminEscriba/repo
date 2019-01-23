@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51.485" height="51.485" viewBox="0 0 51.485 51.485">
+  <g id="Botón_fastfood" transform="translate(-2926.602 -1460)">
+    <g id="Rectangle_2365" data-name="Rectangle 2365" transform="translate(2926.602 1460)" fill="#618eeb" stroke="rgba(0,0,0,0.06)" stroke-width="2">
+      <rect width="51.485" height="51.485" rx="6" stroke="none"/>
+      <rect x="1" y="1" width="49.485" height="49.485" rx="5" fill="none"/>
+    </g>
+    <path id="Path_7138" data-name="Path 7138" d="M18.06,22.99h1.66a1.652,1.652,0,0,0,1.63-1.46L23,5.05H18V1H16.03V5.05H11.06l.3,2.34a10.251,10.251,0,0,1,4.27,2.26,6.89,6.89,0,0,1,2.43,5.29v8.05ZM1,21.99V21H16.03v.99a1,1,0,0,1-1.01,1H2.01A1,1,0,0,1,1,21.99Zm15.03-7c0-8-15.03-8-15.03,0ZM1.02,17h15v2h-15Z" transform="translate(2940 1474)" fill="#fff"/>
+    <path id="Path_7139" data-name="Path 7139" d="M0,0H24V24H0Z" transform="translate(2940 1474)" fill="none"/>
+  </g>
+</svg>

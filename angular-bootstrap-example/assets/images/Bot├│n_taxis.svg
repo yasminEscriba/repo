@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51.485" height="51.485" viewBox="0 0 51.485 51.485">
+  <g id="Botón_taxis" transform="translate(-3322.136 -1223)">
+    <g id="Group_4909" data-name="Group 4909" transform="translate(340 -237)">
+      <g id="Rectangle_2365" data-name="Rectangle 2365" transform="translate(2982.136 1460)" fill="#fecb4e" stroke="rgba(0,0,0,0.06)" stroke-width="2">
+        <rect width="51.485" height="51.485" rx="6" stroke="none"/>
+        <rect x="1" y="1" width="49.485" height="49.485" rx="5" fill="none"/>
+      </g>
+      <path id="Path_7140" data-name="Path 7140" d="M0,0H24V24H0Z" transform="translate(2996 1474)" fill="none"/>
+      <path id="Path_7141" data-name="Path 7141" d="M18.92,6.01A1.494,1.494,0,0,0,17.5,5H6.5A1.5,1.5,0,0,0,5.08,6.01L3,12v8a1,1,0,0,0,1,1H5a1,1,0,0,0,1-1V19H18v1a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V12ZM6.85,7H17.14l1.08,3.11H5.77ZM19,17H5V12H19Z" transform="translate(2996 1474)" fill="#fff"/>
+      <circle id="Ellipse_1040" data-name="Ellipse 1040" cx="1.5" cy="1.5" r="1.5" transform="translate(3002 1487)" fill="#fff"/>
+      <circle id="Ellipse_1041" data-name="Ellipse 1041" cx="1.5" cy="1.5" r="1.5" transform="translate(3011 1487)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

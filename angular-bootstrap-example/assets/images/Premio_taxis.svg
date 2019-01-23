@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51.485" height="50.656" viewBox="0 0 51.485 50.656">
+  <g id="Premio_taxis" transform="translate(-3322.136 -1335.107)">
+    <g id="Group_4914" data-name="Group 4914" transform="translate(280 10)">
+      <g id="Rectangle_2365" data-name="Rectangle 2365" transform="translate(3042.136 1325.107)" fill="#fecb4e" stroke="rgba(0,0,0,0.06)" stroke-width="2">
+        <path d="M0,0H45.485a6,6,0,0,1,6,6V44.656a6,6,0,0,1-6,6H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" stroke="none"/>
+        <path d="M2,1H45.485a5,5,0,0,1,5,5V44.656a5,5,0,0,1-5,5H2a1,1,0,0,1-1-1V2A1,1,0,0,1,2,1Z" fill="none"/>
+      </g>
+      <path id="Path_7140" data-name="Path 7140" d="M0,0H24V24H0Z" transform="translate(3056 1338.685)" fill="none"/>
+      <path id="Path_7141" data-name="Path 7141" d="M18.92,6.01A1.494,1.494,0,0,0,17.5,5H6.5A1.5,1.5,0,0,0,5.08,6.01L3,12v8a1,1,0,0,0,1,1H5a1,1,0,0,0,1-1V19H18v1a1,1,0,0,0,1,1h1a1,1,0,0,0,1-1V12ZM6.85,7H17.14l1.08,3.11H5.77ZM19,17H5V12H19Z" transform="translate(3056 1338.685)" fill="#fff"/>
+      <circle id="Ellipse_1040" data-name="Ellipse 1040" cx="1.5" cy="1.5" r="1.5" transform="translate(3062 1351.685)" fill="#fff"/>
+      <circle id="Ellipse_1041" data-name="Ellipse 1041" cx="1.5" cy="1.5" r="1.5" transform="translate(3071 1351.685)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

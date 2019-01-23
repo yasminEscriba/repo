@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51.485" height="50.656" viewBox="0 0 51.485 50.656">
+  <g id="Premio_tiendas" transform="translate(-3785 -1335)">
+    <g id="Group_4916" data-name="Group 4916">
+      <g id="Rectangle_2365" data-name="Rectangle 2365" transform="translate(3785 1335)" fill="#a39fff" stroke="rgba(0,0,0,0.06)" stroke-width="2">
+        <path d="M0,0H45.485a6,6,0,0,1,6,6V44.656a6,6,0,0,1-6,6H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z" stroke="none"/>
+        <path d="M2,1H45.485a5,5,0,0,1,5,5V44.656a5,5,0,0,1-5,5H2a1,1,0,0,1-1-1V2A1,1,0,0,1,2,1Z" fill="none"/>
+      </g>
+      <path id="Path_7140" data-name="Path 7140" d="M0,0H24V24H0Z" transform="translate(3799 1348)" fill="none"/>
+      <path id="Path_7157" data-name="Path 7157" d="M15.55,13a1.991,1.991,0,0,0,1.75-1.03l3.58-6.49A1,1,0,0,0,20.01,4H5.21L4.27,2H1V4H3l3.6,7.59L5.25,14.03A2,2,0,0,0,7,17H19V15H7l1.1-2ZM6.16,6H18.31l-2.76,5H8.53ZM7,18a2,2,0,1,0,2,2A2,2,0,0,0,7,18Zm10,0a2,2,0,1,0,2,2A2,2,0,0,0,17,18Z" transform="translate(3800 1348)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

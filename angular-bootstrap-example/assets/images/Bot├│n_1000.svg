@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51.485" height="51.485" viewBox="0 0 51.485 51.485">
+  <g id="Botón_1000" transform="translate(-1933 -1226)">
+    <g id="Rectangle_2469" data-name="Rectangle 2469" transform="translate(1933 1226)" fill="#54caad" stroke="rgba(0,0,0,0.06)" stroke-width="2">
+      <rect width="51.485" height="51.485" rx="6" stroke="none"/>
+      <rect x="1" y="1" width="49.485" height="49.485" rx="5" fill="none"/>
+    </g>
+    <text id="_1000" data-name="1000" transform="translate(1959 1252)" fill="#fff" font-size="14" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500"><tspan x="-15.568" y="0">1000</tspan></text>
+    <text id="Opciones" transform="translate(1959 1265)" fill="#fff" font-size="10" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500" opacity="0.6"><tspan x="-22.05" y="0">Opciones</tspan></text>
+  </g>
+</svg>
