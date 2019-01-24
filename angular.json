@@ -29,7 +29,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": ["node_modules/rogroulette/lib/TweenMax.min.js","node_modules/rogroulette/lib/RogRoulette.js"]
           },
           "configurations": {
             "production": {

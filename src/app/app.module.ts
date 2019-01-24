@@ -6,12 +6,14 @@ import { MatCardModule, MatDialogModule } from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
 
 import { AppComponent, DialogDataExampleDialog } from './app.component';
+import { RouletteComponent } from './roulette/roulette.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogDataExampleDialog
+    DialogDataExampleDialog,
+    RouletteComponent
   ],
   imports: [
     BrowserModule,
