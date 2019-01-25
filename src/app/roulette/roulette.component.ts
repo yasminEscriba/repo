@@ -49,19 +49,31 @@ export class RouletteComponent implements OnInit {
       'easing'   : 'spinToStop', //'Power2.easeInOut',
       'segmentWinner' : this.theWheel.getIndicatedSegment()
     };
+
+    this.theWheel.animation = this.rouletteSettingAnimation;
   }
   circleClick(){
     if(!this.theWheel.endRoulette){
       var clickcircletrue=this.theWheel.clickcircle(event);
       if(clickcircletrue){
           // sping ruleta   
+          let countmstimeout=0
           this.theWheel.endRoulette=true;
           this.rouletteAnimation();
+          setTimeout(()=>{ countmstimeout+=1 }, 1);
+          setTimeout(()=>{
+            this.theWheel.animation.propertyValue -= this.theWheel.animation._stopAngle
+            this.theWheel.animation.stopAngle = 190;
+            this.theWheel.animation._stopAngle = (360 - this.theWheel.animation.stopAngle + this.theWheel.pointerAngle);
+            this.theWheel.animation.propertyValue += this.theWheel.animation._stopAngle
+            let durationTimeout = this.theWheel.animation.duration - countmstimeout;
+            this.theWheel.animation.spins = this.theWheel.animation.spins + durationTimeout;
+            this.theWheel.startAnimationTimeout(this.theWheel.animation.propertyValue,durationTimeout);
+          }, 1000);
       }
     }
   }
   private rouletteAnimation(){
-    this.theWheel.animation = this.rouletteSettingAnimation;
     this.theWheel.startAnimation();
     this.theWheel.changeCircle();
   }
