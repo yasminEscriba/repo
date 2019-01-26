@@ -13,12 +13,12 @@ export class RouletteService {
   constructor(private globals: Globals, private http: HttpClient) { 
   }
   ngOnInit(){
-    this.httpOptions = {
+    /*this.httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-    };
+    };*/
   }
   getWinner(): Observable<any> {
-    return this.http.get<any>(this.globals.endpoint + 'winner/').pipe(
+    return this.http.get<any>('https://roulettemillionaire.azurewebsites.net/api/HttpTrigger1?code=GfnQebahGyyKWQmLpgn8N7v/nI/uaaWEHjLrnGdYbMxiz3q1Wiga0g==').pipe(
       tap( (data) => console.log('getWinner') ),
       catchError(this.handleError<any>('getWinner'))
     );

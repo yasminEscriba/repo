@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouletteService } from '../services/roulette.service';
 declare var Winwheel: any;
 @Component({
   selector: 'abe-roulette',
@@ -11,7 +12,7 @@ export class RouletteComponent implements OnInit {
   rouletteSetting: object = {};
   rouletteSettingAnimation: object = {};
   endRoulette: boolean = false; // end pins
-  constructor(){
+  constructor(private rouletteServices: RouletteService){
   }
   ngOnInit() {
     this.rouletteSetting = {
@@ -26,12 +27,12 @@ export class RouletteComponent implements OnInit {
       'endRoulette' : this.endRoulette,
       'segments'     :
       [
-          {'image' : 'assets/images/slide1.png', 'text' : '1 Auto 0km'}, // 0 - 60 (10-50)
-          {'image' : 'assets/images/slide2.png', 'text' : '+1000 oportunidades más'}, // 61 - 120 (70 - 110)
-          {'image' : 'assets/images/slide3.png', 'text' : '1 Cesta llena en plaza vea'}, // 121 - 180 (130 - 170)
-          {'image' : 'assets/images/slide4.png', 'text' : '+10 oportunidades más'}, // 181 - 240 (190 - 230)
-          {'image' : 'assets/images/slide5.png', 'text' : '1 Bembos combo royal'}, // 241 - 300 (250 - 290)
-          {'image' : 'assets/images/slide6.png', 'text' : '+800 oportunidades más'} // 301 - 360 (310 - 350)
+          {'id':1, 'image' : 'assets/images/slide1.png', 'text' : '1 Auto 0km', 'stopangle': 10}, // 0 - 60 (10-50)
+          {'id':2, 'image' : 'assets/images/slide2.png', 'text' : '+1000 oportunidades más', 'stopangle': 70}, // 61 - 120 (70 - 110)
+          {'id':3, 'image' : 'assets/images/slide3.png', 'text' : '1 Cesta llena en plaza vea', 'stopangle': 130}, // 121 - 180 (130 - 170)
+          {'id':4, 'image' : 'assets/images/slide4.png', 'text' : '+10 oportunidades más', 'stopangle': 190}, // 181 - 240 (190 - 230)
+          {'id':5, 'image' : 'assets/images/slide5.png', 'text' : '1 Bembos combo royal', 'stopangle': 250}, // 241 - 300 (250 - 290)
+          {'id':6, 'image' : 'assets/images/slide6.png', 'text' : '+800 oportunidades más', 'stopangle': 310} // 301 - 360 (310 - 350)
       ],
       'pins' :
       {
@@ -61,15 +62,30 @@ export class RouletteComponent implements OnInit {
           this.theWheel.endRoulette=true;
           this.rouletteAnimation();
           setTimeout(()=>{ countmstimeout+=1 }, 1);
-          setTimeout(()=>{
-            this.theWheel.animation.propertyValue -= this.theWheel.animation._stopAngle
-            this.theWheel.animation.stopAngle = 190;
-            this.theWheel.animation._stopAngle = (360 - this.theWheel.animation.stopAngle + this.theWheel.pointerAngle);
-            this.theWheel.animation.propertyValue += this.theWheel.animation._stopAngle
-            let durationTimeout = this.theWheel.animation.duration - countmstimeout;
-            this.theWheel.animation.spins = this.theWheel.animation.spins + durationTimeout;
-            this.theWheel.startAnimationTimeout(this.theWheel.animation.propertyValue,durationTimeout);
-          }, 1000);
+          //setTimeout(()=>{
+            this.rouletteServices.getWinner().subscribe((result) => {
+              try{
+                let xstopangle=null;
+                this.rouletteSetting['segments'].forEach(element => {
+                  if(element['id'] == result.idwinner){
+                    xstopangle=element['stopangle'];
+                  }
+                });
+                  this.theWheel.animation.propertyValue -= this.theWheel.animation._stopAngle
+                  this.theWheel.animation.stopAngle = xstopangle;
+                  this.theWheel.animation._stopAngle = (360 - this.theWheel.animation.stopAngle + this.theWheel.pointerAngle);
+                  this.theWheel.animation.propertyValue += this.theWheel.animation._stopAngle
+                  let durationTimeout = this.theWheel.animation.duration - countmstimeout;
+                  this.theWheel.animation.spins = this.theWheel.animation.spins + durationTimeout;
+                  this.theWheel.startAnimationTimeout(this.theWheel.animation.propertyValue,durationTimeout);
+                
+              }catch(err){
+                top.location.href="/";
+              }
+
+            }, (err) => {});      
+
+          //}, 1000);
       }
     }
   }
