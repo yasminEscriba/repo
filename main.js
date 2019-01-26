@@ -119,8 +119,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _roulette_roulette_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./roulette/roulette.component */ "./src/app/roulette/roulette.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _roulette_roulette_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./roulette/roulette.component */ "./src/app/roulette/roulette.component.ts");
+/* harmony import */ var _globals__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./globals */ "./src/app/globals.ts");
+
+
 
 
 
@@ -135,22 +139,23 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
-                _app_component__WEBPACK_IMPORTED_MODULE_6__["DialogDataExampleDialog"],
-                _roulette_roulette_component__WEBPACK_IMPORTED_MODULE_7__["RouletteComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_7__["DialogDataExampleDialog"],
+                _roulette_roulette_component__WEBPACK_IMPORTED_MODULE_8__["RouletteComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
                 _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_4__["MatToolbarModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatCardModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatDialogModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_5__["MatDialogModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"]
             ],
             entryComponents: [
-                _app_component__WEBPACK_IMPORTED_MODULE_6__["DialogDataExampleDialog"]
+                _app_component__WEBPACK_IMPORTED_MODULE_7__["DialogDataExampleDialog"]
             ],
-            providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
+            providers: [_globals__WEBPACK_IMPORTED_MODULE_9__["Globals"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -168,6 +173,35 @@ var AppModule = /** @class */ (function () {
 /***/ (function(module, exports) {
 
 module.exports = "\r\n\r\n<div mat-dialog-content>\r\n  <div *ngIf=\"data.vista == 1\">\r\n    \r\n\r\n      \r\n      <div   align=\"center\" style=\"height:500px\">\r\n        <p>&nbsp;</p>\r\n        \r\n          <img class='illustration'src='assets/images/Premio_10.svg' style='max-width: 70%'/>\r\n           <div id=bloque>\r\n              <p></p>\r\n            </div>\r\n          <p><span class=\"parrafo2\"> 10 opciones extra de ganar </span>\r\n              <br /> <span class=\"parrafo2\">el sorteo del departamento, viaje y auto</span></p>  \r\n              \r\n              <div >\r\n              <mat-dialog-actions  align=\"center\"> \r\n                <button  mat-button mat-dialog-close type=\"button\" class=\"btn btn-success btn-cons\">Cerrar</button> \r\n              </mat-dialog-actions> </div> \r\n      </div>\r\n      \r\n            \r\n    </div>\r\n  \r\n  <div *ngIf=\"data.vista == 2\">\r\n     \r\n      \r\n      <div   align=\"center\" style=\"height:500px\">\r\n        <p>&nbsp;</p>\r\n        \r\n          <img class='illustration' src='assets/images/Premio_800.svg' style='max-width: 70%'/>\r\n           <div id=bloque>\r\n              <p></p>\r\n            </div>\r\n          <p><span class=\"parrafo2\"> 800 opciones extra de ganar </span>\r\n              <br /> <span class=\"parrafo2\">el sorteo del departamento, viaje y auto</span></p>  \r\n              \r\n              <div  class=\"center-div\">\r\n              <mat-dialog-actions>\r\n                <button  mat-button mat-dialog-close type=\"button\" class=\"btn btn-success btn-cons\" >Cerrar</button> \r\n                \r\n              </mat-dialog-actions> </div> \r\n      </div>\r\n  </div>\r\n\r\n  <div *ngIf=\"data.vista == 3\">\r\n      \r\n      \r\n      <div   align=\"center\" style=\"height:500px\">\r\n        <p>&nbsp;</p>\r\n        \r\n          <img class='illustration' src='assets/images/Premio_1000.svg' style='max-width: 70%'/>\r\n           <div id=bloque>\r\n              <p></p>\r\n            </div>\r\n          <p><span class=\"parrafo2\"> 1000 opciones extra de ganar </span>\r\n              <br /> <span class=\"parrafo2\">el sorteo del departamento, viaje y auto</span></p>  \r\n              \r\n              <div  class=\"center-div\">\r\n              <mat-dialog-actions>\r\n                <button  mat-button mat-dialog-close type=\"button\" class=\"btn btn-success btn-cons\" >Cerrar</button> \r\n              </mat-dialog-actions> </div> \r\n      </div>\r\n      </div>\r\n\r\n\r\n      <div *ngIf=\"data.vista == 4\">\r\n         \r\n          \r\n          <div   align=\"center\" style=\"height:500px\">\r\n            <p>&nbsp;</p>\r\n            \r\n              <img class='illustration' src='assets/images/Detalle_fastfood.svg' style='max-width: 70%'/>\r\n               <div id=bloque>\r\n                  <p></p>\r\n                </div>\r\n              <p><span class=\"parrafo2\"> <b>Combo a S/. 10 en</b> </span>\r\n                  <br /> <span class=\"parrafo2\"><b>fastfood</b></span></p>  \r\n                  \r\n                  <span class=\"parrafo3\"> Detalle del producto, detalle </span>\r\n                    <br /> <span class=\"parrafo3\">del producto</span> \r\n\r\n                  <p><span class=\"parrafo3\"> X unidades disponibles </span>\r\n\r\n                  <div  class=\"center-div\">\r\n                  <mat-dialog-actions>\r\n                    <button   mat-button mat-dialog-close type=\"button\" class=\"btn btn-success btn-cons\">Cerrar</button> \r\n                  </mat-dialog-actions> </div> \r\n\r\n                \r\n      </div>\r\n    </div>\r\n\r\n      <div *ngIf=\"data.vista == 5\">\r\n     \r\n          \r\n          <div   align=\"center\" style=\"height:500px\">\r\n            <p>&nbsp;</p>\r\n            \r\n              <img class='illustration' src='assets/images/Detalle_taxis.svg' style='max-width: 150px'/>\r\n               <div id=bloque>\r\n                  <p></p>\r\n                </div>\r\n                <p><span class=\"parrafo2\"> <b> S/. 10 de descuento en </b> </span>\r\n                  <br /> <span class=\"parrafo2\"><b>taxis</b></span></p>  \r\n                  \r\n                <span class=\"parrafo3\"> Detalle del producto, detalle </span>\r\n                    <br /> <span class=\"parrafo3\">del producto</span>\r\n\r\n                  <P><span class=\"parrafo3\"> X unidades disponibles </span>\r\n\r\n                  <div  class=\"center-div\">\r\n                  <mat-dialog-actions>\r\n                    <button   mat-button mat-dialog-close type=\"button\" class=\"btn btn-success btn-cons\">Cerrar</button> \r\n                  </mat-dialog-actions> </div> \r\n                \r\n      </div>\r\n    </div>\r\n      \r\n      <div *ngIf=\"data.vista == 6\">\r\n         \r\n          <div   align=\"center\" style=\"height:500px\">\r\n            <p>&nbsp;</p>\r\n            \r\n              <img class='illustration' src='assets/images/Detalle_tiendas.svg' style='max-width: 150px'/>\r\n               <div id=bloque>\r\n                  <p></p>\r\n                </div>\r\n                <p><span class=\"parrafo2\"> <b> S/. 10 de descuento en </b> </span>\r\n                  <br /> <span class=\"parrafo2\"><b>Plaza Vea</b></span></p>  \r\n                  \r\n                  <span class=\"parrafo3\"> Detalle del producto, detalle </span>\r\n                    <br /> <span class=\"parrafo3\">del producto</span>\r\n\r\n                    <p><span class=\"parrafo3\"> X unidades disponibles </span>\r\n\r\n                  <div  class=\"center-div\">\r\n                  <mat-dialog-actions>\r\n                    <button   mat-button mat-dialog-close type=\"button\" class=\"btn btn-success btn-cons\">Cerrar</button> \r\n                  </mat-dialog-actions> </div>             \r\n      </div>\r\n</div>\r\n\r\n<div *ngIf=\"data.vista == 7\">\r\n \r\n    \r\n          <p align=\"center\"><span class=\"parrafo4\"> <b> ¿Cómo funciona tu ruleta? </b> </span>\r\n          </p>  \r\n            \r\n          <p><span class=\"dot\"></span><span class=\"parrafo3\"> Todos los meses tendras disponible \r\n               un giro en tu ruleta \r\n              y diferentes  premios por <br />ganar. </span></p>\r\n              <p><span class=\"dot\"></span><span class=\"parrafo3\"> Para jugar solo debes mantener como minimo\r\n                  S/. 1500 o $750 en promedio el mes anterior.\r\n                  </span></p>\r\n                 <p><span class=\"dot\"></span><span class=\"parrafo3\"> Descarga el vale digital en tu celular\r\n                   o muéstrale al representate del comercio indicado para canjearlo. </span></p>\r\n                   <p><span class=\"dot\"></span><span class=\"parrafo3\"> Recibirás el detalle y condiciones de cada premio\r\n                     ganado al correo registrado en Interbank. </span></p>\r\n\r\n            <div  class=\"center-div\">\r\n            <mat-dialog-actions>\r\n              <button   mat-button mat-dialog-close type=\"button\" class=\"btn btn-success btn-cons\">Entendido</button> \r\n            </mat-dialog-actions> </div>             \r\n</div>\r\n\r\n<div *ngIf=\"data.vista == 8\">\r\n    \r\n      \r\n            <p align=\"center\"><span class=\"parrafo4\" > <b> ¡Ganaste un descuento de S/100 en taxis! </b> </span>\r\n            </p>  \r\n\r\n            <div class=\"card\">\r\n                <div class=\"card-body\">\r\n                    <p align=\"center\"><span class=\"parrafo2\"> Código de canje</span>\r\n                     </p> \r\n                </div> \r\n\r\n                <table class=\"data\" align=\"center\">\r\n                    <tr>\r\n                      <th class=\"col-sm-10\" ><span class=\"parrafo3\"> 183948893489303 <br> Clave 120 </span></th>\r\n                      <th  ><img src='assets/images/Premio_taxis.svg'/></th>\r\n                      \r\n                     \r\n                    </tr>\r\n                  </table>\r\n\r\n                  <p>&nbsp;</p>\r\n\r\n                  <p align=\"center\"><span class=\"parrafo3\"> Descarga el vale completo para obtener \r\n                      información sobre locales disponibles o términos y condiciones. </span></p>\r\n\r\n                  <p align=\"center\"><span class=\"parrafo3\"> Vence 18 de mayo del 2019 </span></p>\r\n\r\n              </div>\r\n\r\n              <div  class=\"center-div\">\r\n              <mat-dialog-actions>\r\n                <button   mat-button mat-dialog-close type=\"button\" class=\"btn btn-success btn-cons\">Descargar vale digital</button> \r\n              </mat-dialog-actions> </div>             \r\n  </div>\r\n\r\n</div>\r\n\r\n"
+
+/***/ }),
+
+/***/ "./src/app/globals.ts":
+/*!****************************!*\
+  !*** ./src/app/globals.ts ***!
+  \****************************/
+/*! exports provided: Globals */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Globals", function() { return Globals; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var Globals = /** @class */ (function () {
+    function Globals() {
+        this.endpoint = 'https://roulettemillionaire.azurewebsites.net/api/';
+    }
+    Globals = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], Globals);
+    return Globals;
+}());
+
+
 
 /***/ }),
 
@@ -205,10 +239,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouletteComponent", function() { return RouletteComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_roulette_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/roulette.service */ "./src/app/services/roulette.service.ts");
+
 
 
 var RouletteComponent = /** @class */ (function () {
-    function RouletteComponent() {
+    function RouletteComponent(rouletteServices) {
+        this.rouletteServices = rouletteServices;
         this.theWheel = [];
         this.rouletteSetting = {};
         this.rouletteSettingAnimation = {};
@@ -226,12 +263,12 @@ var RouletteComponent = /** @class */ (function () {
             'canvasId': 'canvas',
             'endRoulette': this.endRoulette,
             'segments': [
-                { 'image': 'assets/images/slide1.png', 'text': '1 Auto 0km' },
-                { 'image': 'assets/images/slide2.png', 'text': '+1000 oportunidades más' },
-                { 'image': 'assets/images/slide3.png', 'text': '1 Cesta llena en plaza vea' },
-                { 'image': 'assets/images/slide4.png', 'text': '+10 oportunidades más' },
-                { 'image': 'assets/images/slide5.png', 'text': '1 Bembos combo royal' },
-                { 'image': 'assets/images/slide6.png', 'text': '+800 oportunidades más' } // 301 - 360 (310 - 350)
+                { 'id': 1, 'image': 'assets/images/slide1.png', 'text': '1 Auto 0km', 'stopangle': 10 },
+                { 'id': 2, 'image': 'assets/images/slide2.png', 'text': '+1000 oportunidades más', 'stopangle': 70 },
+                { 'id': 3, 'image': 'assets/images/slide3.png', 'text': '1 Cesta llena en plaza vea', 'stopangle': 130 },
+                { 'id': 4, 'image': 'assets/images/slide4.png', 'text': '+10 oportunidades más', 'stopangle': 190 },
+                { 'id': 5, 'image': 'assets/images/slide5.png', 'text': '1 Bembos combo royal', 'stopangle': 250 },
+                { 'id': 6, 'image': 'assets/images/slide6.png', 'text': '+800 oportunidades más', 'stopangle': 310 } // 301 - 360 (310 - 350)
             ],
             'pins': {
                 'outerRadius': 6,
@@ -248,19 +285,44 @@ var RouletteComponent = /** @class */ (function () {
             'easing': 'spinToStop',
             'segmentWinner': this.theWheel.getIndicatedSegment()
         };
+        this.theWheel.animation = this.rouletteSettingAnimation;
     };
     RouletteComponent.prototype.circleClick = function () {
+        var _this = this;
         if (!this.theWheel.endRoulette) {
             var clickcircletrue = this.theWheel.clickcircle(event);
             if (clickcircletrue) {
                 // sping ruleta   
+                var countmstimeout_1 = 0;
                 this.theWheel.endRoulette = true;
                 this.rouletteAnimation();
+                setTimeout(function () { countmstimeout_1 += 1; }, 1);
+                //setTimeout(()=>{
+                this.rouletteServices.getWinner().subscribe(function (result) {
+                    try {
+                        var xstopangle_1 = null;
+                        _this.rouletteSetting['segments'].forEach(function (element) {
+                            if (element['id'] == result.idwinner) {
+                                xstopangle_1 = element['stopangle'];
+                            }
+                        });
+                        _this.theWheel.animation.propertyValue -= _this.theWheel.animation._stopAngle;
+                        _this.theWheel.animation.stopAngle = xstopangle_1;
+                        _this.theWheel.animation._stopAngle = (360 - _this.theWheel.animation.stopAngle + _this.theWheel.pointerAngle);
+                        _this.theWheel.animation.propertyValue += _this.theWheel.animation._stopAngle;
+                        var durationTimeout = _this.theWheel.animation.duration - countmstimeout_1;
+                        _this.theWheel.animation.spins = _this.theWheel.animation.spins + durationTimeout;
+                        _this.theWheel.startAnimationTimeout(_this.theWheel.animation.propertyValue, durationTimeout);
+                    }
+                    catch (err) {
+                        top.location.href = "/";
+                    }
+                }, function (err) { });
+                //}, 1000);
             }
         }
     };
     RouletteComponent.prototype.rouletteAnimation = function () {
-        this.theWheel.animation = this.rouletteSettingAnimation;
         this.theWheel.startAnimation();
         this.theWheel.changeCircle();
     };
@@ -270,9 +332,70 @@ var RouletteComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./roulette.component.html */ "./src/app/roulette/roulette.component.html"),
             styles: [__webpack_require__(/*! ./roulette.component.scss */ "./src/app/roulette/roulette.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_roulette_service__WEBPACK_IMPORTED_MODULE_2__["RouletteService"]])
     ], RouletteComponent);
     return RouletteComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/roulette.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/services/roulette.service.ts ***!
+  \**********************************************/
+/*! exports provided: RouletteService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouletteService", function() { return RouletteService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _globals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
+
+
+
+var RouletteService = /** @class */ (function () {
+    function RouletteService(globals, http) {
+        this.globals = globals;
+        this.http = http;
+        this.httpOptions = {};
+    }
+    RouletteService.prototype.ngOnInit = function () {
+        /*this.httpOptions = {
+          headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+        };*/
+    };
+    RouletteService.prototype.getWinner = function () {
+        return this.http.get('https://roulettemillionaire.azurewebsites.net/api/HttpTrigger1?code=GfnQebahGyyKWQmLpgn8N7v/nI/uaaWEHjLrnGdYbMxiz3q1Wiga0g==&id=4').pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["tap"])(function (data) { return console.log('getWinner'); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(this.handleError('getWinner')));
+        //return tap( ([{'spinswinner':3}]) )
+    };
+    RouletteService.prototype.handleError = function (operation, result) {
+        if (operation === void 0) { operation = 'operation'; }
+        return function (error) {
+            // TODO: send the error to remote logging infrastructure
+            console.error(error); // log to console instead
+            // TODO: better job of transforming error for user consumption
+            console.log(operation + " failed: " + error.message);
+            // Let the app keep running by returning an empty result.
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["of"])(result);
+        };
+    };
+    RouletteService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_globals__WEBPACK_IMPORTED_MODULE_3__["Globals"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    ], RouletteService);
+    return RouletteService;
 }());
 
 

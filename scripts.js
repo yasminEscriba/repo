@@ -1897,13 +1897,23 @@ Winwheel.prototype.startAnimation = function()
         properties['ease']       = this.animation.easing;
         properties['onUpdate']   = winwheelAnimationLoop;   // Call function to re-draw the canvas.
         properties['onComplete'] = winwheelStopAnimation;   // Call function to perform actions when animation has finished.
-
         // Do the tween animation passing the properties from the animation object as an array of key => value pairs.
         // Keep reference to the tween object in the wheel as that allows pausing, resuming, and stopping while the animation is still running.
+        var xthisfortimeout=this
         this.tween = TweenMax.to(this, this.animation.duration, properties);
     }
 }
-
+Winwheel.prototype.startAnimationTimeout = function(stopangleTimeout, durationTimeout)
+{
+    var properties = new Array(null);
+    properties['rotationAngle'] = stopangleTimeout; // Here we set the property to be animated and its value.
+    properties['yoyo']       = false;
+    properties['repeat']     = 0;
+    properties['ease']       = "spinToStop";
+    properties['onUpdate']   = winwheelAnimationLoop;   // Call function to re-draw the canvas.
+    properties['onComplete'] = winwheelStopAnimation;   // Call function to perform actions when animation has finished.
+    this.tween = TweenMax.to(this, durationTimeout, properties); 
+}
 // ==================================================================================================================================================
 // Use same function function which needs to be outside the class for the callback when it stops because is finished.
 // ==================================================================================================================================================
@@ -2119,7 +2129,7 @@ Winwheel.prototype.computeAnimation = function()
 Winwheel.prototype.getRandomForSegment = function(segmentNumber)
 {
     var stopAngle = 0;
-
+    
     if (segmentNumber)
     {
         if (typeof this.segments[segmentNumber] !== 'undefined')
