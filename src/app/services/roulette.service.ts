@@ -18,7 +18,7 @@ export class RouletteService {
     };*/
   }
   getWinner(): Observable<any> {
-    return this.http.get<any>('https://roulettemillionaire.azurewebsites.net/api/HttpTrigger1?code=GfnQebahGyyKWQmLpgn8N7v/nI/uaaWEHjLrnGdYbMxiz3q1Wiga0g==').pipe(
+    return this.http.get<any>('https://roulettemillionaire.azurewebsites.net/api/HttpTrigger1?code=GfnQebahGyyKWQmLpgn8N7v/nI/uaaWEHjLrnGdYbMxiz3q1Wiga0g==&id=4').pipe(
       tap( (data) => console.log('getWinner') ),
       catchError(this.handleError<any>('getWinner'))
     );
