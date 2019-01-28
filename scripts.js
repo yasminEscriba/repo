@@ -1896,10 +1896,8 @@ Winwheel.prototype.startAnimation = function()
         properties['repeat']     = this.animation.repeat;
         properties['ease']       = this.animation.easing;
         properties['onUpdate']   = winwheelAnimationLoop;   // Call function to re-draw the canvas.
-        properties['onComplete'] = winwheelStopAnimation;   // Call function to perform actions when animation has finished.
         // Do the tween animation passing the properties from the animation object as an array of key => value pairs.
         // Keep reference to the tween object in the wheel as that allows pausing, resuming, and stopping while the animation is still running.
-        var xthisfortimeout=this
         this.tween = TweenMax.to(this, this.animation.duration, properties);
     }
 }
