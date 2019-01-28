@@ -191,9 +191,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Globals = /** @class */ (function () {
-    //timeout_spinsroulette: 1;
     function Globals() {
         this.endpoint = 'https://roulettemillionaire.azurewebsites.net/api/';
+        this.timeout_spinsroulette = 4;
     }
     Globals = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
@@ -310,25 +310,25 @@ var RouletteComponent = /** @class */ (function () {
                     countinterval_1 = false;
                     try {
                         var countsegtimeout = countmstimeout_1 / 1000;
-                        /*
-                        if(countsegtimeout > this.globals.timeout_spinsroulette ){
-                          console.log(countsegtimeout + '>' + this.globals.timeout_spinsroulette)
-                        }else{*/
-                        var xstopangle_1 = null;
-                        _this.rouletteSetting['segments'].forEach(function (element) {
-                            if (element['id'] == result.idwinner) {
-                                xstopangle_1 = element['stopangle'];
-                            }
-                        });
-                        _this.theWheel.animation.propertyValue -= _this.theWheel.animation._stopAngle;
-                        _this.theWheel.animation.stopAngle = xstopangle_1;
-                        _this.theWheel.animation._stopAngle = (360 - _this.theWheel.animation.stopAngle + _this.theWheel.pointerAngle);
-                        _this.theWheel.animation.propertyValue += _this.theWheel.animation._stopAngle;
-                        var durationTimeout = _this.theWheel.animation.duration - countsegtimeout;
-                        //let durationTimeout = this.theWheel.animation.duration;
-                        _this.theWheel.animation.spins = _this.theWheel.animation.spins + durationTimeout;
-                        _this.theWheel.startAnimationTimeout(_this.theWheel.animation.propertyValue, durationTimeout);
-                        //}
+                        if (countsegtimeout > _this.globals.timeout_spinsroulette) {
+                            top.location.href = "/";
+                        }
+                        else {
+                            var xstopangle_1 = null;
+                            _this.rouletteSetting['segments'].forEach(function (element) {
+                                if (element['id'] == result.idwinner) {
+                                    xstopangle_1 = element['stopangle'];
+                                }
+                            });
+                            _this.theWheel.animation.propertyValue -= _this.theWheel.animation._stopAngle;
+                            _this.theWheel.animation.stopAngle = xstopangle_1;
+                            _this.theWheel.animation._stopAngle = (360 - _this.theWheel.animation.stopAngle + _this.theWheel.pointerAngle);
+                            _this.theWheel.animation.propertyValue += _this.theWheel.animation._stopAngle;
+                            var durationTimeout = _this.theWheel.animation.duration - countsegtimeout;
+                            //let durationTimeout = this.theWheel.animation.duration;
+                            _this.theWheel.animation.spins = _this.theWheel.animation.spins + durationTimeout;
+                            _this.theWheel.startAnimationTimeout(_this.theWheel.animation.propertyValue, durationTimeout);
+                        }
                     }
                     catch (err) {
                         top.location.href = "/";
