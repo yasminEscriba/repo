@@ -72,26 +72,24 @@ export class RouletteComponent implements OnInit {
             countinterval = false;
             try{
               let countsegtimeout = countmstimeout / 1000;
-              /*
               if(countsegtimeout > this.globals.timeout_spinsroulette ){
-                console.log(countsegtimeout + '>' + this.globals.timeout_spinsroulette)
-              }else{*/
-
-              let xstopangle=null;
-              this.rouletteSetting['segments'].forEach(element => {
-                if(element['id'] == result.idwinner){
-                  xstopangle=element['stopangle'];
-                }
-              });
-                this.theWheel.animation.propertyValue -= this.theWheel.animation._stopAngle
-                this.theWheel.animation.stopAngle = xstopangle;
-                this.theWheel.animation._stopAngle = (360 - this.theWheel.animation.stopAngle + this.theWheel.pointerAngle);
-                this.theWheel.animation.propertyValue += this.theWheel.animation._stopAngle
-                let durationTimeout = this.theWheel.animation.duration - countsegtimeout;
-                //let durationTimeout = this.theWheel.animation.duration;
-                this.theWheel.animation.spins = this.theWheel.animation.spins + durationTimeout;
-                this.theWheel.startAnimationTimeout(this.theWheel.animation.propertyValue,durationTimeout);
-              //}
+                top.location.href="/";
+              }else{
+                let xstopangle=null;
+                this.rouletteSetting['segments'].forEach(element => {
+                  if(element['id'] == result.idwinner){
+                    xstopangle=element['stopangle'];
+                  }
+                });
+                  this.theWheel.animation.propertyValue -= this.theWheel.animation._stopAngle
+                  this.theWheel.animation.stopAngle = xstopangle;
+                  this.theWheel.animation._stopAngle = (360 - this.theWheel.animation.stopAngle + this.theWheel.pointerAngle);
+                  this.theWheel.animation.propertyValue += this.theWheel.animation._stopAngle
+                  let durationTimeout = this.theWheel.animation.duration - countsegtimeout;
+                  //let durationTimeout = this.theWheel.animation.duration;
+                  this.theWheel.animation.spins = this.theWheel.animation.spins + durationTimeout;
+                  this.theWheel.startAnimationTimeout(this.theWheel.animation.propertyValue,durationTimeout);
+              }
             }catch(err){
               top.location.href="/";
             }
