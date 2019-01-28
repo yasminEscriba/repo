@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouletteService } from '../services/roulette.service';
+import { Globals } from '../globals';
 declare var Winwheel: any;
 @Component({
   selector: 'abe-roulette',
@@ -12,7 +13,7 @@ export class RouletteComponent implements OnInit {
   rouletteSetting: object = {};
   rouletteSettingAnimation: object = {};
   endRoulette: boolean = false; // end pins
-  constructor(private rouletteServices: RouletteService){
+  constructor(private globals: Globals, private rouletteServices: RouletteService){
   }
   ngOnInit() {
     this.rouletteSetting = {
@@ -43,10 +44,10 @@ export class RouletteComponent implements OnInit {
     this.theWheel = new Winwheel(this.rouletteSetting);
     this.rouletteSettingAnimation = {
       'type'     : 'spinToStop',
-      'duration' : 6,     // otg parametro | a mayor valor mas lento el giro, Duration in seconds.
+      'duration' : 10,     // otg parametro | a mayor valor mas lento el giro, Duration in seconds.
       'spins'    : 3,     // otg parametro | # giro a mayor valor más duración,Default number of complete spins.
       //'startAngle' : 100,
-      'stopAngle': 80,    // otg parametro | angle de ganador
+      'stopAngle': 0,    // otg parametro | angle de ganador
       'easing'   : 'spinToStop', //'Power2.easeInOut',
       'segmentWinner' : this.theWheel.getIndicatedSegment()
     };
@@ -59,33 +60,43 @@ export class RouletteComponent implements OnInit {
       if(clickcircletrue){
           // sping ruleta   
           let countmstimeout=0
+          let countinterval=true;
           this.theWheel.endRoulette=true;
           this.rouletteAnimation();
-          setTimeout(()=>{ countmstimeout+=1 }, 1);
-          //setTimeout(()=>{
-            this.rouletteServices.getWinner().subscribe((result) => {
-              try{
-                let xstopangle=null;
-                this.rouletteSetting['segments'].forEach(element => {
-                  if(element['id'] == result.idwinner){
-                    xstopangle=element['stopangle'];
-                  }
-                });
-                  this.theWheel.animation.propertyValue -= this.theWheel.animation._stopAngle
-                  this.theWheel.animation.stopAngle = xstopangle;
-                  this.theWheel.animation._stopAngle = (360 - this.theWheel.animation.stopAngle + this.theWheel.pointerAngle);
-                  this.theWheel.animation.propertyValue += this.theWheel.animation._stopAngle
-                  let durationTimeout = this.theWheel.animation.duration - countmstimeout;
-                  this.theWheel.animation.spins = this.theWheel.animation.spins + durationTimeout;
-                  this.theWheel.startAnimationTimeout(this.theWheel.animation.propertyValue,durationTimeout);
-                
-              }catch(err){
-                top.location.href="/";
-              }
+          setInterval(()=>{
+            if(countinterval){
+              countmstimeout+=1;
+            }
+          }, 1);
+          this.rouletteServices.getWinner().subscribe((result) => {
+            countinterval = false;
+            try{
+              let countsegtimeout = countmstimeout / 1000;
+              /*
+              if(countsegtimeout > this.globals.timeout_spinsroulette ){
+                console.log(countsegtimeout + '>' + this.globals.timeout_spinsroulette)
+              }else{*/
 
-            }, (err) => {});      
+              let xstopangle=null;
+              this.rouletteSetting['segments'].forEach(element => {
+                if(element['id'] == result.idwinner){
+                  xstopangle=element['stopangle'];
+                }
+              });
+                this.theWheel.animation.propertyValue -= this.theWheel.animation._stopAngle
+                this.theWheel.animation.stopAngle = xstopangle;
+                this.theWheel.animation._stopAngle = (360 - this.theWheel.animation.stopAngle + this.theWheel.pointerAngle);
+                this.theWheel.animation.propertyValue += this.theWheel.animation._stopAngle
+                let durationTimeout = this.theWheel.animation.duration - countsegtimeout;
+                //let durationTimeout = this.theWheel.animation.duration;
+                this.theWheel.animation.spins = this.theWheel.animation.spins + durationTimeout;
+                this.theWheel.startAnimationTimeout(this.theWheel.animation.propertyValue,durationTimeout);
+              //}
+            }catch(err){
+              top.location.href="/";
+            }
 
-          //}, 1000);
+          }, (err) => {});      
       }
     }
   }
